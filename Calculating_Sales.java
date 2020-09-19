@@ -47,12 +47,12 @@ public class Calculating_Sales {
         //--------------------------------------------------------------------------------------------------------------
         do {
             // Get product_number input from user.
-            System.out.print("(Enter 0 see Total) or Enter Product (1-5): ");
+            System.out.print("(Enter 0 to see Total) or Enter Product (1-5): ");
             product_number = input.nextInt();
 
             // Input validation
             while (product_number < 0 | product_number > 5) {
-                System.out.print("ERROR: (Enter 0 see Total) or Enter Product (1-5): ");
+                System.out.print("ERROR: (Enter 0 to see Total) or Enter Product (1-5): ");
                 product_number = input.nextInt();
             }
 
