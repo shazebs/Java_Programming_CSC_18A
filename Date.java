@@ -26,7 +26,7 @@ public class Date {
     
     // check for leap year if month is 2 and day is 29
     if (month == 2 && day == 29 && !(year % 400 == 0 ||
-        (year % 4 = 0 && year % 100 != 0))) {
+        (year % 4 == 0 && year % 100 != 0))) {
       throw new IllegalArgumentException("day (" + day + 
         ") out-of-range for the specified month and year");
     }
