@@ -53,30 +53,41 @@ public class RandomSentences {
 
         // local variables
         int num; // to hold random number value
+        StringBuilder buffer = new StringBuilder(); // to hold a random sentence via String.append()
+        String spacebar = " ";
+        String period = ".";
 
-        // get first word from array 'article'
+
+        // get first word from array 'article' at random
         num = randomNumbers.nextInt(5);
-        System.out.printf("%s ", article[num]);
+        // capitalize first letter of the sentence
+        buffer.append(article[num].substring(0,1).toUpperCase())
+                // print the remaining substring of the word
+                .append(article[num].substring(1, article[num].length()))
+                .append(spacebar);
 
         // get second word from array 'noun'
         num = randomNumbers.nextInt(5);
-        System.out.printf("%s ", noun[num]);
+        buffer.append(noun[num]).append(spacebar);
 
         // get third word from array 'verb'
         num = randomNumbers.nextInt(5);
-        System.out.printf("%s ", verb[num]);
+        buffer.append(verb[num]).append(spacebar);
 
         // get fourth word from array 'preposition'
         num = randomNumbers.nextInt(5);
-        System.out.printf("%s ", preposition[num]);
+        buffer.append(preposition[num]).append(spacebar);
 
         // get fifth word from array 'article'
         num = randomNumbers.nextInt(5);
-        System.out.printf("%s ", article[num]);
+        buffer.append(article[num]).append(spacebar);
 
         // get sixth word from array 'noun'
         num = randomNumbers.nextInt(5);
-        System.out.printf("%s.", noun[num]);
+        buffer.append(noun[num]).append(period);
+
+        // print buffer
+        System.out.print(buffer.toString());
 
     }
 
